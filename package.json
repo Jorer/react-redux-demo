@@ -1,0 +1,61 @@
+{
+  "name": "demo",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+
+    "react-loadable": "^5.3.1",
+    "react-router": "^4.2.0",
+    "react-router-transition": "^1.2.0",
+
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
+    "redux-actions": "^2.2.1",
+    "redux-api-middleware": "^2.0.1",
+
+    "react-transition-group": "^2.2.1",
+    "react-progressive-image": "^0.3.0",
+    "styled-components": "^2.4.0"
+  },
+  "devDependencies": {
+    "cross-env": "^5.1.3",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.0",
+    "faker": "^4.1.0",
+    "json-schema-faker": "^0.5.0-rc12",
+    "json-server": "^0.12.1",
+    "react-scripts": "^1.1.0",
+    "redux-devtools": "^3.4.1",
+    "scaffold-generator": "^1.1.2",
+    "source-map-explorer": "^1.5.0",
+    "to-case": "^2.0.0",
+    "yargs": "^8.0.1"
+  },
+  "scripts": {
+    "dev": "yarn start-mockapi | yarn start",
+    "start": "cross-env NODE_PATH=./src react-scripts start",
+    "build": "cross-env NODE_PATH=./src react-scripts build",
+    "test": "cross-env NODE_PATH=./src react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "generate:component": "node ./scripts/generate.js --type=component",
+    "generate:container": "node ./scripts/generate.js --type=container",
+    "generate-mock-data": "node ./scripts/generateMockData",
+    "prestart-mockapi": "npm run generate-mock-data",
+    "start-mockapi":
+      "json-server --watch ./server/db.json --port 3001 --delay 1200",
+    "size": "source-map-explorer build/static/js/*.js"
+  },
+  "rules": {
+    "jsx-a11y/mouse-events-map-to-key-events": "off",
+    "jsx-a11y/no-hash-href": "off",
+    "jsx-a11y/redundant-alt": "off"
+  },
+  "browserslist": {
+    "production": ["last 2 version", "ie 9"],
+    "development": ["last 1 version"]
+  }
+}

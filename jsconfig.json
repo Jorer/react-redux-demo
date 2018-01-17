@@ -1,0 +1,8 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=759670
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "ES6",
+        "baseUrl": "./src"
+    }
+}
